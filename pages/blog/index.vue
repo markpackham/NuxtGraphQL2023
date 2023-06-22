@@ -11,7 +11,7 @@ const { data: posts } = await useAsyncData('posts', () =>
     write about something or be a guest blogger on your blog please reach out to me on Twitter. If you would like to
     subscribe to an RSS feed you can find it here.
 
-    <section class="">
+    <section class="grid md:grid-cols-2 mt-8 gap-10">
         <Post :posts="posts" />
     </section>
 </template>
