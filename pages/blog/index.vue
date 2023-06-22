@@ -10,11 +10,4 @@ const { data: posts } = await useAsyncData('posts', () =>
     I like to write about anything thta I am currently working or something new that interests me. If you would like me to
     write about something or be a guest blogger on your blog please reach out to me on Twitter. If you would like to
     subscribe to an RSS feed you can find it here.
-
-    <ul>
-        <li v-for="post in posts" :key="post._id" class="my-8 py-4 border-b-2">
-            <nuxt-link :to="post._path" class="text-blue-500 text-2xl">{{ post.title }}</nuxt-link>
-            <p class="text-gray-500">{{ post.description }}</p>
-        </li>
-    </ul>
 </template>
