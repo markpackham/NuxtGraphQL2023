@@ -3,6 +3,10 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss', 'nuxt-icon', '@nuxt/content', '@nuxtjs/apollo'
   ],
+  runtimeConfig: {
+    // tokens created from https://github.com/settings/tokens
+    githubToken: process.env.GITHUB_TOKEN
+  },
   content: {
     // https://content.nuxtjs.org/api/configuration
     highlight: {
