@@ -1,4 +1,31 @@
 <script setup>
+const query = gql`
+{
+  viewer {
+    repositories(first: 6, orderBy:{field:CREATED_AT,direction: DESC}) {
+      totalCount
+      nodes {
+        id
+        name
+        createdAt
+        description
+        url
+        forks {
+          totalCount
+        }
+        watchers {
+          totalCount
+        }
+        stargazers {
+          totalCount
+        }
+      }
+    }
+  }
+}
+`
+
+const { data } = await useAsyncQuery(query);
 </script>
 
 <template>
