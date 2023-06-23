@@ -9,5 +9,13 @@ export default defineNuxtConfig({
       theme: 'nord',
       preload: ['ts','js','css','java','json','bash','vue']
     }
-  }
+  },
+  apollo: {
+    clients: {
+      default: {
+        tokenName: 'github-token',
+        httpEndpoint: 'https://api.github.com/graphql'
+      }
+    },
+  },
 })
